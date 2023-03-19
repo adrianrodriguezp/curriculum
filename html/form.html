@@ -5,20 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        body {
+
+           background-color: rgb(167, 142, 1);
+
+               }
+
+          h1{
+            color: rgb(17, 3, 3);
+          }
+
+
+    </style>
+        
+    
 </head>
 <body>
-    <h1>HOLA BIENVENIDOS A FORMULARIOS</h1>
+    <h1>HOLA BIENVENIDOS AL FORMULARIO</h1>
     <fieldset>
-        <form action="">
-            <label for="">NOMBRE</label>
-            <input type="text">
+        <form name="formulario" method="post" action="/send.php">
+            
+
+            <label for="">NOMBRE</label> 
+            <input type="text" name="nombre" placeholder="NOMBRE"
+            required pattern="[A-Za-z0-9]{5,40}"
+           title="Letras. Tamaño mínimo: 8. Maximo 40." />
+
+           <label for="">APELLIDOS</label>
+           <input type="text" name="nombre" placeholder="APELLIDOS"
+           required pattern="[A-Za-z0-9]{5,40}"
+           title="Solo letras. Tamaño minimo 8. Maximo 40.">
+           
 
             <label for="">DIRECCION</label>
-            <input type="text">
+            <input type="text" name="nombre" placeholder="DIRECCION"
+            requie pattern="[A-Za-z0-9]{5,40}"
+            title="Solo Letras y numeros. Cra. calle. ">
+            
 
             <label for="">OBSERVACION</label>
-            <input type="text">
-            <button>ENVIAR</button>
+            <input type="text" name="" placeholder="OBSERVACIONES"
+            required pattern="[A-Za-z0-9]{5,40}"
+            title= "Solo Letras.">
+
+
+            <label for= "Estado">Estado Civil:</label>
+            <select id="Estado" name="Estado">
+            <option value="Opciones">Opciones</option>
+            </select>
+            <br><br>
+
+            <label for="">Correo Electronico:</label>
+            <input type="text"; name="CORREO">   
+
+
+
+</fieldset>
+</form>
+<form >
+
+</form>
+
+
+            
+
     
 </body>
 </html>

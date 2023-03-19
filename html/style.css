@@ -1,17 +1,20 @@
 body {
-    background-color: rgb(224, 111, 4);
+    background-color: rgb(233, 121, 29);
+    
 }
 
 input{
     border-radius: 5px;
-    border: 3px solid orange;
+    border: 3px solid rgb(0, 204, 255);
 
 
 }      
 
 .tipoinputs{
-    background-color: rgb(13, 223, 153);
+    background-color: rgb(10, 205, 231);
 }
 #nombredepersona{
     height: 50px;
 }
+
+
