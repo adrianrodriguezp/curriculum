@@ -7,39 +7,323 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/Tennis.png" type="image/png">
     <title>Hoja de vida Adrian</title>
+
+    <style>
+
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+    overflow: hidden;
+}
+
+header::before {
+    content: "";
+    display: block;
+    margin-bottom: 80px;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    border-bottom: 1px solid transparent;
+    box-shadow: 1px 1px 10px 0 rgba(0,0,0,.2);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.nav {
+    display: flex;
+    height: 80px;
+    width: 100%;
+    align-items: center;
+}
+
+.enlaces-header {
+    font-weight: 300;
+    margin: auto;
+}
+
+.nav .enlaces-header a {
+    color: #5d6678;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.nav .enlaces-header a:hover {
+    color: #fff;
+    background-color: #d03d3d;
+    border-color: #d03d3d;
+    transition: all ease-in-out .5s;
+}
+
+.titulospro {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.contenido-header {
+    width: 80%;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.contenido-header > img {
+    width: 300px;
+    height: 300px;
+    margin-left: 50px;
+    animation: ease-in animacion 0.5s;
+}
+
+.textos-header {
+    margin: 0 0 0 30px;
+}
+
+.contenido-header P {
+    font-weight: 300;
+    margin-top: 14px;
+    color: #5d6678;
+    text-align: justify;
+}
+
+@keyframes animacion {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+}
+
+.contenido-header a {
+    margin: 28px 0 0 0;
+    width: 150px;
+    display: inline-block;
+    background-color: #d03d3d;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 0;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    box-shadow: 0 8px 32px rgba(97, 31, 31, 0.46);
+}
+
+/* /* #######################  PIE DE PAGINA #################################/* */
+footer {
+
+    background-color: rgb(70, 70, 70);
+    padding: 50px 0 20px 0;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.partFooter {
+
+    width: 22%;
+    text-align: center;
+
+}
+
+.partFooter img {
+    width: 60%;
+}
+
+.partFooter h4 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    background-color: #5d6678;
+    padding: 5px 0;
+    border: 1px solid #5d6678;
+    border-radius: 5px;
+}
+
+.contact {
+
+    margin: 10px;
+    display: block;
+    text-align: left;
+}
+
+.contact > i {
+    float: left;
+    margin: 0 0 0 10px;
+    color: #5d6678;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    height: 30px;
+    width: 30px;
+    line-height: 28px;
+    text-align: center;
+    align-items: center;
+}
+
+.contact > p {
+    margin-left: 50px;
+    align-items: center;
+    line-height: 28px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.partFooter > a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: 500;
+    padding: 5px;
+}
+
+.partFooter > a:hover {
+    background-color: #5d6678;
+    border-color: #5d6678;
+    border-radius: 5px;
+    transition: all ease-in-out .6s;
+}
+
+.social-media {
+    font-size: 20px;
+    display: inline-block;
+    color: #fff;
+    border-radius: 1px solid #fff;
+    width: 38px;
+    height: 38px;
+    line-height: 36px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center;
+    transition: all ease-in-out .6s;
+    margin-right: 5px;
+}
+
+.social-media > a > i:hover {
+    background-color: #5d6678;
+    border-color: #5d6678;
+}
+
+img{
+
+    border-radius: 15%;
+    
+    
+
+}
+
+
+
+    </style>
 </head>
 <body>
-    <header>
+     <header id="inicio">
         <nav>
             <section class="contenedor nav">
-                <div class="logo">
-                    <img src="img/Tennis.png" alt="logo empresa">
-                </div>
-                <div class="enlaces_header">
-                    <a href="">inicio</a>
-                    <a href="">inicio</a>
-                    <a href="">inicio</a>
-                    <a href="">inicio</a>
-                    <a href="">inicio</a>
+                <div class="enlaces-header">
+                    <a href="#">inicio</a>
+                    <a href="#">inicio</a>
+                    <a href="#">inicio</a>
+                    <a href="#">inicio</a>
+                    <a href="#">inicio</a>
+                    <a href="#">inicio</a>
                 </div>
             </section>
         </nav>
-    <!-- <menu></menu> -->
         <div class="contenedor">
-            <section class="contenido_header">
-                <section class="texto_header">
-            
-
-                <h1>AQUI VA EL CONTENIDO DE LA PAGINA</h1>
-                <P>DESCRIPCION DEL CONTENIDO DE LA PAGINA</P>
-               
-            
+            <section class="contenido-header">
+                <section class="textos-header">
+                    <h1>ADRIAN RODRIGUEZ</h1>
+                    <div class="titulospro">
+                        <h3><i class="fa-solid fa-circle-check"></i>  Ingeniería de Sistemas (e)</h3>
+                        <h3><i class="fa-solid fa-circle-check"></i>  Bachiller Técnico</h3>
+                        <h3><i class="fa-solid fa-circle-check"></i>  Jugador de billar  </h3>
+                        <h3><i class="fa-solid fa-circle-check"></i>  El rey del forro</h3>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. I</p>
+                    <a href="#" target="_blank">Ver Perfil</a>
+                </section>
+                <img src="img/adrian.01.jpg" alt="Balón de Fútbol">
             </section>
-            <img src="img/Tennis.png" alt="">
-            
         </div>
-        <!-- contenedor -->
-    
     </header>
+
+    <footer>
+        
+    </footer>
+
+    <script src="https://kit.fontawesome.com/41dcbe248c.js" crossorigin="anonymous"></script>
+    <header>
+
+        <section>
+            <div>
+
+                
+
+
+
+
+            </div>
+
+
+        </section>
+
+
+        <footer>
+            <div class="partFooter">
+                <img src="img/adrian.01.jpg" alt="Foto del autor">
+            </div>
+            <div class="partFooter">
+                <h4>Contacto</h4>
+                <div class="contact">
+                    <p>(+57) 312-330-8082</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="partFooter">
+<h4>ENLACES </h4>
+<a href="#" target="_blank"> TITULO ENLACES</a>
+<a href="#" target="_blank">TITULO ENLACE</a>
+<a href="#" target="_blank"> TITULO ENLACE</a>
+ </div>   
+ 
+ <div class="partFooter">
+    <h4>REDES SOCIALES</h4>
+
+<div class="social-media">
+    <a href="#" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+    <a href="#" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+    <a href="#" target="_blank"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+
+</div>
+
+ </div>
+ 
+ </footer>
 </body>
 </html>
