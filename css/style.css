@@ -1,64 +1,427 @@
-*{
-    padding: 0; /*Distancia externa*/
-    margin: 0; /*Distancia interna*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-body{
-    font-family:'Roboto' sans-serif;
+
+body {
+    font-family: 'Roboto', sans-serif;
 }
-.contenedor{
+
+h1 {
+    font-size: 50px;
+}
+
+.contenedor {
     width: 90%;
-    max-width: 1500;
+    max-width: 1400px;
     margin: auto;
+    overflow: hidden;
 }
+
+header::before {
+    content: "";
+    display: block;
+    margin-bottom: 80px;
+}
+
 nav {
     width: 100%;
     height: 80px;
-    background-color: gray;
+    background: #fff;
     border-bottom: 1px solid transparent;
-    box-shadow: 1px 1px 10 px 0 rgba(0, 0, .2);
+    box-shadow: 1px 1px 10px 0 rgba(0,0,0,.2);
     position: fixed;
     top: 0;
     z-index: 100;
-
 }
 
-.nav{
-display: flex;
-justify-content: space-between;
-height: 80px;
-width: 100%;
-align-items: center;
-padding: 0 40px;
-
-}
-
-.nav .logo{
-    height: 80px;
-
-}
-
-.nav .logo img {
-    height: 100%;
-
-}
-
-.nav .enlaces_header a{
-    color: black;
-    text-decoration: none;
-    margin-left: 20px;
-
-}
-
-.contenido_header{
-    width: 100%;
-    height: 600px;
+.nav {
     display: flex;
-    justify-content: center;
+    height: 80px;
+    width: 100%;
     align-items: center;
 }
 
-.contenido_header > img{
-    height: 100px;
-    width: 100px;
+.enlaces-header {
+    font-weight: 300;
+    margin: auto;
+    transition: all ease-in-out .6s;
+}
 
+.nav .enlaces-header a {
+    color: #5d6678;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.nav .enlaces-header a:hover {
+    color: #fff;
+    background-color: #d03d3d;
+    border-color: #d03d3d;
+    transition: all ease-in-out .5s;
+}
+
+.hamburger{
+    height: 80px;
+    width: 80px;
+    text-align: center;
+    z-index: 100;
+    cursor: pointer;
+    transition: color 0.5s ease-in;
+    display: none;
+}
+
+.hamburger > i{
+    font-size: 25px;
+    line-height: 80px;
+}
+
+.titulospro {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.contenido-header {
+    width: 80%;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.contenido-header > img {
+    width: 300px;
+    height: 300px;
+    margin-left: 50px;
+    animation: ease-in animacion 0.5s;
+}
+
+.textos-header {
+    margin: 0 0 0 30px;
+}
+
+.contenido-header P {
+    font-weight: 300;
+    margin-top: 14px;
+    color: #5d6678;
+    text-align: justify;
+}
+
+@keyframes animacion {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+}
+
+.contenido-header a {
+    margin: 28px 0 0 0;
+    width: 150px;
+    display: inline-block;
+    background-color: #d03d3d;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 0;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    box-shadow: 0 8px 32px rgba(97, 31, 31, 0.46);
+}
+
+/* /* #######################  PIE DE PAGINA #################################/* */
+footer {
+
+    background-color: rgb(70, 70, 70);
+    padding: 50px 0 20px 0;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.partFooter {
+
+    width: 22%;
+    text-align: center;
+
+}
+
+.partFooter img {
+    width: 60%;
+}
+
+.partFooter h4 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    background-color: #5d6678;
+    padding: 5px 0;
+    border: 1px solid #5d6678;
+    border-radius: 5px;
+}
+
+.contact {
+
+    margin: 10px;
+    display: block;
+    text-align: left;
+}
+
+.contact > i {
+    float: left;
+    margin: 0 0 0 10px;
+    color: #5d6678;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    height: 30px;
+    width: 30px;
+    line-height: 28px;
+    text-align: center;
+    align-items: center;
+}
+
+.contact > p {
+    margin-left: 50px;
+    align-items: center;
+    line-height: 28px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.partFooter > a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: 500;
+    padding: 5px;
+}
+
+.partFooter > a:hover {
+    background-color: #5d6678;
+    border-color: #5d6678;
+    border-radius: 5px;
+    transition: all ease-in-out .6s;
+}
+
+.social-media {
+    font-size: 20px;
+    display: inline-block;
+    color: #fff;
+    border-radius: 1px solid #fff;
+    width: 38px;
+    height: 38px;
+    line-height: 36px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center;
+    transition: all ease-in-out .6s;
+    margin-right: 5px;
+}
+
+.social-media > a > i:hover {
+    background-color: #5d6678;
+    border-color: #5d6678;
+}
+
+/* EDUCATION */
+
+.section-education {
+    background-color: #dbdbdb;
+
+}
+
+.section-education .tittle{
+    display: block;
+    margin: 15px 0;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    align-items: center;
+}
+
+
+.content-education{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 30px;
+}
+
+.education{
+    width: 30%;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.education i {
+    border-radius: 50%;
+    border: 2px solid #5d6678;
+    background-color: #5d6678;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 36px;
+}
+
+.education:hover{
+    background-color: #d03d3d;
+    box-shadow: 0 0 8px gray;
+    transition: all ease-in-out .4s;
+    color: #fff;
+}
+
+.content-education .education a {
+    color: gray;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.content-education .education a:hover{
+    background-color: #fff;
+}
+
+/* Certificados */
+
+.section-certificates .tittle{
+        display: block;
+        margin: 15px 0 0 0;
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+      
+    }
+
+    .content-certificates{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-bottom: 30px;
+    }
+
+    .certificates{
+        width: 22%;
+        border-radius: 5px;
+        border: 2px solid #d03d3d;
+        padding: 15px;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .certificates img{
+        height: 100px;
+        width: auto;
+    }
+
+    .certificates a{
+        font-size: 12px;
+        color: gray;
+        text-decoration: none;
+
+    }
+
+    .certificates:hover{
+        background-color: #d03d3d;
+    box-shadow: 0 0 8px gray;
+    color: #fff;
+    transform: scale(1.2);
+    transition: all ease-in-out .7s;
+    border: 2px solid #fff;
+    }
+
+    .certificates a:hover{
+        color: #fff;
+    }
+
+    /* /* #######################  BREAK-POINTS #################################/* */
+@media screen and (max-width:700px){
+    .hamburger{
+        display: block;
+    }
+
+    .enlaces-header{
+        position: fixed;
+        background-color: #d03d3d;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        clip-path: circle(0% at 0 0);
+    }
+
+    .nav .hamburgeropen{
+        clip-path: circle(150% at 0 0);
+    }
+
+    .nav .enlaces-header a {
+        color: #fff;
+        background-color: #b35858;
+        text-transform: uppercase;
+        font-weight: 800;
+        width: 50%;
+        text-align: center;
+        margin-top: 20px;
+        
+    }
+
+    h1{
+        font-size: 25px;
+        margin-top: 5px;
+    }
+
+    .textos-header {
+        margin: 0;
+    }
+
+    .contenido-header{
+        display: block;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .contenido-header > img {
+        margin: 15px 0 0 0;
+        width: 150px;
+        height: 150px;
+    }
+
+    /* SECTION EDUCATION */
+
+    .education{
+        width: 90%;
+        margin-bottom: 15px;
+    }
+
+    /* SECTION CERTIFICATES */
+
+    .certificates{
+        width: 90%;
+    }
+
+    .certificates img {
+        height: 80px;
+    }
+
+    /* FOOTER */
+
+    .partFooter img {
+        display: none;
+    }
+
+    .partFooter {
+        width: 90%;
+    }
 }
